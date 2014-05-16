@@ -1,0 +1,61 @@
+body {
+	margin-top: 50px; /* 50px is the height of the navbar - change this if the navbarn height changes */
+	background: url(sativa.png) repeat 0 0;
+}
+
+
+footer {
+	margin: 50px 0;
+}
+
+.mainContent{
+	min-height: 500px;
+}
+
+
+.pane{
+	background-color: #fff;
+	border-radius: 30px;
+}
+
+.card{
+	background-color: #ac3030;
+	border-radius: 40px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+
+.card header {
+  background-color: hsl(73, 95%, 41%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c5f80b", endColorstr="#a0cb05");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#c5f80b), to(#a0cb05));
+  background-image: -moz-linear-gradient(top, #c5f80b, #a0cb05);
+  background-image: -ms-linear-gradient(top, #c5f80b, #a0cb05);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c5f80b), color-stop(100%, #a0cb05));
+  background-image: -webkit-linear-gradient(top, #c5f80b, #a0cb05);
+  background-image: -o-linear-gradient(top, #c5f80b, #a0cb05);
+  background-image: linear-gradient(#c5f80b, #a0cb05);
+  border-color: #a0cb05 #a0cb05 hsl(73, 95%, 38.5%);
+  color: #fff !important;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.16);
+  -webkit-font-smoothing: antialiased;
+}
+
+.pane h1 {
+	text-align: center;
+}
+
+[draggable] {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	khtml-user-drag: element;
+	webkit-user-drag:element;
+}
+
+.over {
+	border: 2px dashed #000;
+}
