@@ -9,24 +9,6 @@ function handleDragStart(e) {
   this.classList.add('dragging');
 }
 
-function handleDragEnd(e) {
-  this.style.opacity = '1.0';
-
-  Array.prototype.forEach.call(card, function(t) {
-    t.classList.remove('dragging');
-    t.classList.remove('over');
-  });
-}
-
-
-Array.prototype.forEach.call(pane, function(p) {
-
-  p.addEventListener('dragover', handleDragStart);
-  p.addEventListener('dragenter', handleDragEnd);
-});
-
-
-
 function handleDragOver(e) {
   if (e.preventDefault) {
     e.preventDefault();
@@ -43,6 +25,15 @@ function handleDragEnter(e) {
 
 function handleDragLeave(e) {
   this.classList.remove('over');
+}
+
+function handleDragEnd(e) {
+  this.style.opacity = '1.0';
+
+  Array.prototype.forEach.call(card, function(t) {
+    t.classList.remove('dragging');
+    t.classList.remove('over');
+  });
 }
 
 
@@ -69,6 +60,12 @@ function handleDropOntoPane(e) {
   return false;
 }
 
+
+Array.prototype.forEach.call(pane, function(p) {
+
+  p.addEventListener('dragover', handleDragStart);
+  p.addEventListener('dragenter', handleDragEnd);
+});
 
 Array.prototype.forEach.call(card, function(p) {
   p.addEventListener('dragover', handleDragOver);
